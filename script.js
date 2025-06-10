@@ -1,5 +1,5 @@
 window.onload = function () {
-  // Typewriter letter content
+  // Your new heartfelt letter
   const letterText = `
 Mi Cachetona,
 I wanted to take a moment to write you this letter,
@@ -34,11 +34,13 @@ Goodbye, con todo mi amor.
     }
   }
 
-  setTimeout(typeWriter, 4000); // Start after 4 seconds
+  setTimeout(typeWriter, 4000); // Start typing after 4 seconds
 
-  // Create falling "I'm sorry" stars
+  // Create falling "I'm sorry" texts with performance in mind
   const container = document.getElementById('falling-text');
-  for (let i = 0; i < 40; i++) {
+  const numTexts = 25; // slightly fewer for smoother performance
+
+  for (let i = 0; i < numTexts; i++) {
     const text = document.createElement('div');
     text.classList.add('falling-text');
     text.innerText = "I'm sorry";
@@ -49,3 +51,4 @@ Goodbye, con todo mi amor.
     container.appendChild(text);
   }
 };
+

@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', serif;
+  background: radial-gradient(ellipse at center, #2e1d3e 0%, #0d0d20 100%);
+  color: #ffeef8;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  padding: 40px 20px;
+  max-width: 700px;
+  margin: 10vh auto;
+  text-align: left;
+}
+
+.title {
+  font-size: 2.5em;
+  color: #ffd4eb;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* Love letter area */
+.letter {
+  font-size: 1.3em;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  border-left: 3px solid #ffd6ec;
+  padding-left: 20px;
+  min-height: 200px;
+}
+
+/* Falling "I'm sorry" glowing stars */
+.falling-text-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.falling-text {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.08);
+  text-shadow: 0 0 8px rgba(255, 200, 255, 0.3);
+  font-style: italic;
+  font-size: 1.5em;
+  animation: fall linear infinite;
+  white-space: nowrap;
+  user-select: none;
+}
+
+@keyframes fall {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}

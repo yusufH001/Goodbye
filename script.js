@@ -1,5 +1,4 @@
 window.onload = function () {
-  // Your new heartfelt letter
   const letterText = `
 Mi Cachetona,
 I wanted to take a moment to write you this letter,
@@ -30,15 +29,14 @@ Goodbye, con todo mi amor.
     if (index < letterText.length) {
       letter.innerHTML += letterText.charAt(index);
       index++;
-      setTimeout(typeWriter, 40); // Speed of typing
+      setTimeout(typeWriter, 40);
     }
   }
 
-  setTimeout(typeWriter, 4000); // Start typing after 4 seconds
+  setTimeout(typeWriter, 4000);
 
-  // Create falling "I'm sorry" texts with performance in mind
   const container = document.getElementById('falling-text');
-  const numTexts = 25; // slightly fewer for smoother performance
+  const numTexts = 25;
 
   for (let i = 0; i < numTexts; i++) {
     const text = document.createElement('div');
@@ -51,4 +49,5 @@ Goodbye, con todo mi amor.
     container.appendChild(text);
   }
 };
+
 

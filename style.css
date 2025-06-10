@@ -1,3 +1,4 @@
+/* Base styles */
 body {
   margin: 0;
   padding: 0;
@@ -5,17 +6,19 @@ body {
   background: radial-gradient(ellipse at center, #2e1d3e 0%, #0d0d20 100%);
   color: #ffeef8;
   overflow: hidden;
+  line-height: 1.6;
 }
 
+/* Container holding everything */
 .container {
   position: relative;
   z-index: 2;
   padding: 40px 20px;
   max-width: 700px;
   margin: 10vh auto;
-  text-align: left;
 }
 
+/* Title styling */
 .title {
   font-size: 2.5em;
   color: #ffd4eb;
@@ -23,17 +26,17 @@ body {
   margin-bottom: 50px;
 }
 
-/* Love letter area */
+/* Letter content */
 .letter {
-  font-size: 1.3em;
-  line-height: 1.8;
+  font-size: 1.25em;
   white-space: pre-wrap;
   border-left: 3px solid #ffd6ec;
   padding-left: 20px;
+  color: #fff0f5;
   min-height: 200px;
 }
 
-/* Falling "I'm sorry" glowing stars */
+/* Falling "I'm sorry" text */
 .falling-text-container {
   position: fixed;
   top: 0;
@@ -47,7 +50,7 @@ body {
 
 .falling-text {
   position: absolute;
-  color: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.07);
   text-shadow: 0 0 8px rgba(255, 200, 255, 0.3);
   font-style: italic;
   font-size: 1.5em;
@@ -56,7 +59,45 @@ body {
   user-select: none;
 }
 
+/* Falling animation */
 @keyframes fall {
   0% { transform: translateY(-100%); }
   100% { transform: translateY(100vh); }
+}
+
+/* ---------- Responsive Adjustments ---------- */
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+
+  .letter {
+    font-size: 1.1em;
+    padding-left: 15px;
+  }
+
+  .falling-text {
+    font-size: 1.2em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    margin-top: 6vh;
+    padding: 20px 15px;
+  }
+
+  .title {
+    font-size: 1.6em;
+  }
+
+  .letter {
+    font-size: 1em;
+    padding-left: 12px;
+  }
+
+  .falling-text {
+    font-size: 1em;
+  }
 }

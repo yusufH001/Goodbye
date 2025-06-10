@@ -1,18 +1,26 @@
 window.onload = function () {
   // Typewriter letter content
   const letterText = `
-Dear Love,
+Mi Cachetona,
+I wanted to take a moment to write you this letter,
+to express how much you mean to me and how much I will miss you.
+You are an incredible person,
+and I am so grateful for the time we spent together.
+You have a beautiful heart, and your kindness and warmth
+You will always be in my heart, shining brighter than the stars.
 
-I'm sorry...
-Sometimes love, no matter how deep, isn't enough to keep two stars aligned.
+I really enjoyed talking to you every day — 
+you made my days feel so much better just by being there.
 
-Maybe we weren’t meant to last forever — 
-but for a while, we were everything to each other.
+I'm truly sorry for not being exactly what you were looking for.
 
-You will always be a part of my sky.
-Thank you for being my favorite constellation.
+Sometimes love means knowing when to let go,
+and even if we're not meant to be forever,
+I will always cherish the moments we shared.
 
-Goodbye, with love.
+Gracias por todo, mi hermosa.
+
+Goodbye, con todo mi amor.
 `;
 
   const letter = document.getElementById('letter');
